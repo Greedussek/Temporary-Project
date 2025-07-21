@@ -38,5 +38,6 @@ export async function showResourcesForVillage(villageId) {
   document.getElementById("steel").textContent = resources.steel;
 
   document.getElementById("villageList").classList.add("hidden");
+  document.getElementById("con").classList.add("hidden");
   await loadBuildings(villageId);
 }
