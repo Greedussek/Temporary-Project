@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Rejestracja i Logowanie</title>
+  <script src="https://unpkg.com/pocketbase/dist/pocketbase.umd.js"></script>
+  <link rel="stylesheet" href="css/css.css" />
+</head>
+<body>
+<div class="main-content">
+  <div id="formContainer">
+    <h2 id="formTitle">Rejestracja</h2>
+
+    <form id="registerForm">
+      <input type="email" id="regEmail" placeholder="Email" required>
+      <input type="password" id="regPassword" placeholder="Hasło" required>
+      <input type="password" id="regPasswordConfirm" placeholder="Powtórz hasło" required>
+      <button type="submit">Zarejestruj</button>
+    </form>
+
+    <form id="loginForm" class="hidden">
+      <input type="text" id="logIdentity" placeholder="Email lub użytkownik" required>
+      <input type="password" id="logPassword" placeholder="Hasło" required>
+      <button type="submit">Zaloguj</button>
+    </form>
+
+    <div id="result"></div>
+    <div id="error"></div>
+
+   
+    <button id="button1" class="switch active" onclick="showForm('register')">Rejestracja</button>
+    <button id="button2" class="switch" onclick="showForm('login')">Logowanie</button>
+  </div>
+  <div id="con" class="hidden">
+    <h1>Moja Strona</h1>
+    <button onclick="createVillage()">Kliknij mnie</button>
+  </div> 
+</div>
+
+
+<ul id="buildingList"></ul>
+
+<ul id="villageList"></ul>
+
+  <div class="footer">
+    <div class="resource">Drewno: <span id="wood">10</span></li></div>
+    <div class="resource">Kamień: <span id="stone">10</span></div>
+    <div class="resource">Złoto: <span id="gold">10</span></div>
+    <div class="resource">Stal: <span id="steel">10</span></div>
+    <div class="resource">5</div>
+  </div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
